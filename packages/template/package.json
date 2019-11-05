@@ -1,0 +1,25 @@
+{
+  "name": "@react-native-firebase/template",
+  "version": "6.0.3",
+  "author": "Invertase <oss@invertase.io> (http://invertase.io)",
+  "description": "React Native Firebase - Template",
+  "scripts": {
+    "build:clean": "rimraf project/android/build && rimraf project/ios/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/invertase/react-native-firebase/tree/master/packages/template"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "react",
+    "react-native",
+    "cli",
+    "firebase",
+    "template"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "e720c0be64600af9c5d838b3abd65a00cd17fd97"
+}

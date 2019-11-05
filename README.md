@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://invertase.io/oss/react-native-firebase">
-    <img width="180px" src="https://i.imgur.com/JIyBtKW.png"><br/>
+    <img width="160px" src="https://i.imgur.com/JIyBtKW.png"><br/>
   </a>
   <h2 align="center">React Native Firebase</h2>
 </p>
@@ -9,123 +9,96 @@
   <a href="https://www.npmjs.com/package/react-native-firebase"><img src="https://img.shields.io/npm/dm/react-native-firebase.svg?style=flat-square" alt="NPM downloads"></a>
   <a href="https://www.npmjs.com/package/react-native-firebase"><img src="https://img.shields.io/npm/v/react-native-firebase.svg?style=flat-square" alt="NPM version"></a>
   <a href="/LICENSE"><img src="https://img.shields.io/npm/l/react-native-firebase.svg?style=flat-square" alt="License"></a>
-  <a href="#backers"><img src="https://opencollective.com/react-native-firebase/backers/badge.svg" alt="Backers on Open Collective"></a>
-  <a href="#sponsors"><img src="https://opencollective.com/react-native-firebase/sponsors/badge.svg" alt="Sponsors on Open Collective"></a>
-  <a href="https://discord.gg/C9aK28N"><img src="https://img.shields.io/discord/295953187817521152.svg?logo=discord&style=flat-square&colorA=7289da&label=discord" alt="Chat"></a>
-  <a href="https://twitter.com/rnfirebase"><img src="https://img.shields.io/twitter/follow/rnfirebase.svg?style=social&label=Follow" alt="Follow on Twitter"></a>
+  <a href="https://lerna.js.org/"><img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=flat-square" alt="Maintained with Lerna"></a>
 </p>
 
-## Introduction
-
-**React Native Firebase** is a _light-weight_ javascript layer connecting you to the native Firebase SDKs for both iOS and Android which aimes to mirror the offical Firebase Web SDK as closely as possible.
-
-Although the official [Firebase JS SDK](https://www.npmjs.com/package/firebase) will work with React Native; it is mainly built for the web and has a limited feature-set compared to native.
-
-Using the native Firebase SDKs with **React Native Firebase** allows you to consume device SDKs which don't exist on the Firebase JS SDK - for example; Remote Config, Performance Monitoring, Dynamic Links, Analytics and more (see the feature table below for comparison).
+<p align="center">
+  <a href="https://invertase.link/discord"><img src="https://img.shields.io/discord/295953187817521152.svg?style=flat-square&colorA=7289da&label=Chat%20on%20Discord" alt="Chat on Discord"></a>
+  <a href="https://twitter.com/rnfirebase"><img src="https://img.shields.io/twitter/follow/rnfirebase.svg?style=flat-square&colorA=1da1f2&colorB=&label=Follow%20on%20Twitter" alt="Follow on Twitter"></a>
+  <a href="https://www.facebook.com/groups/rnfirebase"><img src="https://img.shields.io/badge/Follow%20on%20Facebook-4172B8?logo=facebook&style=flat-square&logoColor=fff" alt="Follow on Facebook"></a>
+</p>
 
 ---
 
-## Supported Firebase Features
-
-> The Web SDK column indicates what modules/functionality from the Web SDK are usable within React Native.
-
-> '**?**' indicates partial support
-
-| Firebase Features                                                                                                                 | v5.x.x | Web SDK |
-| --------------------------------------------------------------------------------------------------------------------------------- | :----: | :-----: |
-| **AdMob**                                                                                                                         |   ✅   |   ❌    |
-| **Analytics**                                                                                                                     |   ✅   |   ❌    |
-| **App Indexing**                                                                                                                  |   ❌   |   ❌    |
-| **Authentication**                                                                                                                |   ✅   |   ✅    |
-| _-- Phone Auth_                                                                                                                   |   ✅   |   ✅    |
-| **Core**                                                                                                                          |   ✅   |   ✅    |
-| _-- Multiple Apps_                                                                                                                |   ✅   |   ✅    |
-| **Cloud Firestore**                                                                                                               |   ✅   |   ✅    |
-| **Cloud Messaging (FCM)**                                                                                                         |   ✅   |   ❌    |
-| **Crashlytics**                                                                                                                   |   ✅   |   ❌    |
-| **Dynamic Links**                                                                                                                 |   ✅   |   ❌    |
-| **[Functions Callable](https://firebase.googleblog.com/2018/04/launching-cloud-functions-for-firebase-1-0.html?m=1)**             |   ✅   |   ✅    |
-| **Invites**                                                                                                                       |   ✅   |   ❌    |
-| **Instance ID**                                                                                                                   |   ✅   |   ❌    |
-| **Performance Monitoring**                                                                                                        |   ✅   |   ❌    |
-| **Realtime Database**                                                                                                             |   ✅   |   ✅    |
-| _-- Offline Persistence_                                                                                                          |   ✅   |  **?**  |
-| **Remote Config**                                                                                                                 |   ✅   |   ❌    |
-| **Storage**                                                                                                                       |   ✅   |   ✅    |
+> Looking for the legacy version of React Native Firebase? See the [v5.x.x branch](https://github.com/invertase/react-native-firebase/tree/v5.x.x).
 
 ---
 
-### Supported versions - React Native / Firebase
+**React Native Firebase** is a collection of official React Native modules connecting you to Firebase services; each module is a light-weight javascript layer connecting you to the native Firebase SDKs for both iOS and Android.
 
-> The table below shows the supported versions of React Native and the Firebase SDKs for different versions of `react-native-firebase`.
+React Native Firebase is built with four key principals in mind;
 
-|                           |  3.3.x   |  4.3.x  |     5.0.x     |
-| ------------------------- | :------: | :-----: | :-----------: |
-| React Native              | 0.50-52  | 0.52-55 |     0.57      |
-| Play Services Android SDK | 11.8.0 + | 15.0.1  |    15.0.1+    |
-| Firebase iOS SDK          | 4.7.0 +  |  5.3.0  | 5.8.1 - 5.9.0 |
+- 🧪 **Well tested**
+  - every module is extensively tested to >95% coverage
+- 👁 **Well typed**
+  - first class support for both Flow & Typescript included
+- 📄 **Well documented**
+  - full reference & installation documentation alongside detailed guides and FAQs
+- 🔥 **Mirrors official Firebase Web SDK**
+  - functions as a drop-in replacement for the Firebase Web SDK in React Native
+  - maximises cross-platform code re-usability e.g. re-using code on web platforms
 
----
+## Firebase Modules
+
+This is the root of the monorepo for React Native Firebase, if you're looking for a specific package please select the package link from below.
+
+The main package that you interface with is `App` (`@react-native-firebase/app`)
+
+| Name                                                     |                                                                                            Downloads                                                                                            |                                                                Coverage                                                                 |
+| -------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: |
+| [AdMob](/packages/admob)                                 |               [![badge](https://img.shields.io/npm/dm/@react-native-firebase/admob.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/admob)               |               [![badge](https://api.rnfirebase.io/coverage/admob/badge)](https://api.rnfirebase.io/coverage/admob/detail)               |
+| [Analytics](/packages/analytics)                         |           [![badge](https://img.shields.io/npm/dm/@react-native-firebase/analytics.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/analytics)           |           [![badge](https://api.rnfirebase.io/coverage/analytics/badge)](https://api.rnfirebase.io/coverage/analytics/detail)           |
+| [App](/packages/app)                                     |                 [![badge](https://img.shields.io/npm/dm/@react-native-firebase/app.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/app)                 |                 [![badge](https://api.rnfirebase.io/coverage/app/badge)](https://api.rnfirebase.io/coverage/app/detail)                 |
+| [Authentication](/packages/auth)                         |                [![badge](https://img.shields.io/npm/dm/@react-native-firebase/auth.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/auth)                |                [![badge](https://api.rnfirebase.io/coverage/auth/badge)](https://api.rnfirebase.io/coverage/auth/detail)                |
+| [Cloud Firestore](/packages/firestore)                   |           [![badge](https://img.shields.io/npm/dm/@react-native-firebase/firestore.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/firestore)           |           [![badge](https://api.rnfirebase.io/coverage/firestore/badge)](https://api.rnfirebase.io/coverage/firestore/detail)           |
+| [Cloud Functions](/packages/functions)                   |           [![badge](https://img.shields.io/npm/dm/@react-native-firebase/functions.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/functions)           |           [![badge](https://api.rnfirebase.io/coverage/functions/badge)](https://api.rnfirebase.io/coverage/functions/detail)           |
+| [Cloud Messaging](/packages/messaging)                   |           [![badge](https://img.shields.io/npm/dm/@react-native-firebase/messaging.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/messaging)           |           [![badge](https://api.rnfirebase.io/coverage/messaging/badge)](https://api.rnfirebase.io/coverage/messaging/detail)           |
+| [Cloud Storage](/packages/storage)                       |             [![badge](https://img.shields.io/npm/dm/@react-native-firebase/storage.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/storage)             |             [![badge](https://api.rnfirebase.io/coverage/storage/badge)](https://api.rnfirebase.io/coverage/storage/detail)             |
+| [Crashlytics](/packages/crashlytics)                     |         [![badge](https://img.shields.io/npm/dm/@react-native-firebase/crashlytics.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/crashlytics)         |         [![badge](https://api.rnfirebase.io/coverage/crashlytics/badge)](https://api.rnfirebase.io/coverage/crashlytics/detail)         |
+| [Dynamic Links](/packages/dynamic-links)                 |       [![badge](https://img.shields.io/npm/dm/@react-native-firebase/dynamic-links.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/dynamic-links)       |       [![badge](https://api.rnfirebase.io/coverage/dynamic-links/badge)](https://api.rnfirebase.io/coverage/dynamic-links/detail)       |
+| [In-app Messaging](/packages/in-app-messaging)           |    [![badge](https://img.shields.io/npm/dm/@react-native-firebase/in-app-messaging.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/in-app-messaging)    |    [![badge](https://api.rnfirebase.io/coverage/in-app-messaging/badge)](https://api.rnfirebase.io/coverage/in-app-messaging/detail)    |
+| [Instance ID](/packages/iid)                             |                 [![badge](https://img.shields.io/npm/dm/@react-native-firebase/iid.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/iid)                 |                 [![badge](https://api.rnfirebase.io/coverage/iid/badge)](https://api.rnfirebase.io/coverage/iid/detail)                 |
+| [ML Kit Natural Language](/packages/ml-natural-language) | [![badge](https://img.shields.io/npm/dm/@react-native-firebase/ml-natural-language.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/ml-natural-language) | [![badge](https://api.rnfirebase.io/coverage/ml-natural-language/badge)](https://api.rnfirebase.io/coverage/ml-natural-language/detail) |
+| [ML Kit Vision](/packages/ml-vision)                     |           [![badge](https://img.shields.io/npm/dm/@react-native-firebase/ml-vision.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/ml-vision)           |           [![badge](https://api.rnfirebase.io/coverage/ml-vision/badge)](https://api.rnfirebase.io/coverage/ml-vision/detail)           |
+| [Notifications](/packages/notifications)                 |       [![badge](https://img.shields.io/npm/dm/@react-native-firebase/notifications.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/notifications)       |       [![badge](https://api.rnfirebase.io/coverage/notifications/badge)](https://api.rnfirebase.io/coverage/notifications/detail)       |
+| [Performance Monitoring](/packages/perf)                 |                [![badge](https://img.shields.io/npm/dm/@react-native-firebase/perf.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/perf)                |                [![badge](https://api.rnfirebase.io/coverage/perf/badge)](https://api.rnfirebase.io/coverage/perf/detail)                |
+| [Realtime Database](/packages/database)                  |            [![badge](https://img.shields.io/npm/dm/@react-native-firebase/database.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/database)            |            [![badge](https://api.rnfirebase.io/coverage/database/badge)](https://api.rnfirebase.io/coverage/database/detail)            |
+| [Remote Config](/packages/remote-config)                 |       [![badge](https://img.shields.io/npm/dm/@react-native-firebase/remote-config.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-firebase/remote-config)       |       [![badge](https://api.rnfirebase.io/coverage/remote-config/badge)](https://api.rnfirebase.io/coverage/remote-config/detail)       |
 
 ## Documentation
 
-To check out our latest docs, visit [https://invertase.io/oss/react-native-firebase](https://invertase.io/oss/react-native-firebase)
+- [Overview](https://invertase.io/oss/react-native-firebase)
+- [Quick Start](https://invertase.io/oss/react-native-firebase/quick-start)
+- [Guides](https://invertase.io/oss/react-native-firebase/guides)
+- [Modules](https://invertase.io/oss/react-native-firebase/v6)
 
-## Questions
+## Contributing
 
-For questions and support please use our [Discord chat](https://discord.gg/C9aK28N) or [Stack Overflow](https://stackoverflow.com/questions/tagged/react-native-firebase). The issue list of this repo is **exclusively** for bug reports.
-
-## Issues
-
-Please make sure to complete the issue template before opening an issue. Issues not conforming to the guidelines may be closed immediately.
-
-## Feature Requests
-
-For feature requests please visit our [Feature Request Board](https://boards.invertase.io/react-native-firebase).
-
-## Changelog
-
-Detailed changes for each release are documented in the [releases notes](https://github.com/invertase/react-native-firebase/releases).
-
----
-
-## Supporting RNFirebase
-
-RNFirebase is an Apache-2.0 licensed open source project. It's an independent project with its ongoing development made possible entirely thanks to the support by these awesome [sponsors](#sponsors) and [backers](#backers). If you'd like to join them, please consider:
-
-- [Become a backer or sponsor on Open Collective](https://opencollective.com/react-native-firebase).
-
-### Sponsors
-
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/react-native-firebase#sponsor)]
-
-<a href="https://opencollective.com/react-native-firebase/sponsor/0/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/1/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/2/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/3/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/4/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/5/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/6/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/7/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/8/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/react-native-firebase/sponsor/9/website" target="_blank"><img src="https://opencollective.com/react-native-firebase/sponsor/9/avatar.svg"></a>
-
-### Backers
-
-Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/react-native-firebase#backer)]
-
-<a href="https://opencollective.com/react-native-firebase#backers" target="_blank"><img src="https://opencollective.com/react-native-firebase/backers.svg?width=890"></a>
-
-### Contributing
-
-Please make sure to read the [Contributing Guide](CONTRIBUTING.md) before making a pull request.
-
-Thank you to all the people who have already contributed to RNFirebase!
-
-<a href="graphs/contributors"><img src="https://opencollective.com/react-native-firebase/contributors.svg?width=890" /></a>
-
-<hr>
+- [Overview](https://invertase.io/oss/react-native-firebase/contributing)
+- [Issues & PRs](https://invertase.io/oss/react-native-firebase/contributing/issues-prs-pm)
+- [Documentation](https://invertase.io/oss/react-native-firebase/contributing/documentation)
+- [Code & Testing](https://invertase.io/oss/react-native-firebase/contributing/code-testing-review)
+- [Marketing & Content](https://invertase.io/oss/react-native-firebase/contributing/marketing-content)
+- [Community](https://invertase.io/oss/react-native-firebase/contributing/community)
+- [Donating](https://invertase.io/oss/react-native-firebase/contributing/donations-expenses)
+- [Code of Conduct](/CODE_OF_CONDUCT.md)
 
 ## License
 
 - See [LICENSE](/LICENSE)
+
+---
+
+<p>
+  <img align="left" width="75px" src="https://static.invertase.io/assets/invertase-logo-small.png"> 
+  <p align="left">  
+    Built and maintained with 💛 by <a href="https://invertase.io">Invertase</a>.
+  </p>
+  <p align="left">  
+    <a href="https://invertase.io/hire-us">💼 Hire Us</a> | 
+    <a href="https://opencollective.com/react-native-firebase">☕️ Sponsor Us</a> | 
+    <a href="https://opencollective.com/jobs">‍💻 Work With Us</a>
+  </p>
+</p>
+
+---
